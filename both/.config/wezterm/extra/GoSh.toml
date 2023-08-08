@@ -1,0 +1,32 @@
+# GoSh Theme
+[colors]
+ansi =  [
+    '#252525', #Black
+    '#f52040', #Maroon
+    '#91f779', #Green
+    '#fba753', #Olive
+    '#2040f5', #Navy
+    '#a13ef7', #Purple
+    '#00bfff', #Teal
+    '#b5b5b5', #Silver
+]
+background = '#050505'
+brights =  [
+    '#3a3a3a', #Grey
+    '#f87eaa', #Red
+    '#00e687', #Lime
+    '#f6e13c', #Yellow
+    '#8172ff', #Blue
+    '#ff3ceb', #Fuchsia
+    '#0cdaff', #Aqua
+    '#e0e0e0', #White
+]
+cursor_bg = '#050505'
+cursor_border = '#b5b5b5'
+cursor_fg = '#e0e0e0'
+foreground = '#a5a5a5'
+selection_bg = '#3a3a3a'
+selection_fg = '#101010'
+
+[metadata]
+name = 'GoSh'
