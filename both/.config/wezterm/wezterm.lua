@@ -1,6 +1,8 @@
 -- Main User Files and configs, 
 --  change this to your main directory like "~/.config" or "C:/Users/%username%/.config"
 userF = 'C:/Users/Cryptis/.config'
+-- For pixelized set to true otherwise set false
+pixel = true 
 
 local wz = require 'wezterm'        -- base required
 local back = require 'extra.backg'  -- this sets the Background

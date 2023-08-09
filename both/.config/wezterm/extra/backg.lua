@@ -1,11 +1,15 @@
 local wz = require 'wezterm'
 local dimmer = { brightness = 0.3 }
+local bg = '/wezterm/sd'
+if _G.pixel == true then
+  bg = '/wezterm/px'
+end
 
 return {
 ground = {
     {
       source = {
-        File = _G.userF .. '/wezterm/bg/bac1.jpg',
+        File = _G.userF..bg..'/bac1.jpg',
       },
       hsb = dimmer,
       opacity = 0.90,
@@ -15,21 +19,21 @@ ground = {
     },
     {
       source = {
-        File = _G.userF .. '/wezterm/bg/sys1.png',
+        File = _G.userF..bg..'/sys1.png',
       },
       hsb = dimmer,
       attachment = { Parallax = 0.25 },
     },
     {
       source = {
-        File = _G.userF .. '/wezterm/bg/sys2.png',
+        File = _G.userF..bg..'/sys2.png',
       },
       hsb = dimmer,
       attachment = { Parallax = 0.5 },
     },
     {
       source = {
-        File = {path=_G.userF .. '/wezterm/bg/ship.gif', speed=0.5},
+        File = {path=_G.userF..bg..'/ship.gif', speed=0.5},
       },
       hsb = dimmer,
       height = '12.5cell',
@@ -43,7 +47,7 @@ ground = {
     },
     {
       source = {
-        File = _G.userF .. '/wezterm/bg/for1.png',
+        File = _G.userF..bg..'/for1.png',
       },
       hsb = dimmer,
       vertical_align = 'Bottom',
