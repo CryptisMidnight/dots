@@ -1,6 +1,6 @@
 # MPV settings and configs 
 
-> List of files and directories 
+#### List of files and directories 
       fonts
       icons
       script-opts
