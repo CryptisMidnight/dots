@@ -1,0 +1,292 @@
+# ~/.config/starship.toml
+
+# format = """\
+# [╓](bold bright-green)$env_var \
+# $all[╚═](bold bright-green)$character"""
+# Powerline
+format = """
+[\uE0B6](black)\
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch$git_status$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust$docker_context\
+$character\
+$fill\
+$fill\
+$memory_usage\
+$battery\
+$cmd_duration\
+$time\
+[\u2588\uE0B4](black)\
+$all[\uE0B6\uE0D2\uF054 ](red)"""
+
+add_newline = true
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = "[\uE0C6 ](bg:bright-green fg:black)[󰛨 ](bg:bright-green fg:black)[\uE0C6](bright-green)"
+error_symbol = "[\uE0C6 ](bg:red fg:black)[󰚌 ](bg:red fg:black)[\uE0C6](red)"
+
+[os]
+style = "bg:black fg:bright-white"
+format = "[ $symbol ]($style)"
+disabled = false
+
+[os.symbols]
+Windows = " "
+Arch = "󰣇 "
+Ubuntu = " "
+Macos = "󰀵 "
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Unknown = " "
+
+[username]
+show_always = true
+style_user = "bg:black fg:red"
+style_root = "bg:black fg:purple"
+# style_user = "bright-green"
+# style_root = "green"
+format = "[$user ]($style)[󰁥 ]($style fg:white)"
+disabled = false
+
+[hostname]
+ssh_only = false
+style = "bg:black"
+ssh_symbol = " "
+format = "[$ssh_symbol](bold $style fg:bright-cyan)[ $hostname ]($style fg:red)"
+disabled = false
+
+[directory]
+truncation_length = 2
+truncation_symbol = "󰉓 /"
+home_symbol = " "
+format = "[$read_only]($read_only_style)[ $path ]($style)"
+style = "bg:black fg:bold green"
+read_only = "\uE0C6 󱚮\uE0C7\u2590"
+read_only_style = "bg:red fg:black"
+
+[directory.substitutions]
+"Documents" = "󰲂"
+"Downloads" = "󰉍"
+"Music" = "󱍙"
+"Pictures" = "󰉏"
+"Games" = "󱧺"
+
+[memory_usage]
+disabled = false
+threshold = -1
+format = "[\uE0C7](fg:bright-green)[$symbol $ram_pct mem]($style)[\uE0C7](bg:bright-green fg:black)"
+symbol = " "
+style = "bg:bright-green fg:black"
+
+# Somethere at the beginning
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂅 "
+discharging_symbol = "󰢝 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+format = "[$symbol$percentage ]($style)"
+disabled = false
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+threshold = 20
+style = "bg:black fg:bold dimmed red"
+charging_symbol = "󰂆 "
+discharging_symbol = "󰁻 "
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 40
+style = "bg:black fg:bold dimmed yellow"
+charging_symbol = "󰂈 "
+discharging_symbol = "󰁽 "
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 60
+style = "bg:black fg:bold yellow"
+charging_symbol = "󰂉 "
+discharging_symbol = "󰁿 "
+
+[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+threshold = 80
+style = "bg:black fg:bold dimmed green"
+charging_symbol = "󰂊 "
+discharging_symbol = "󰂁 "
+
+[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+threshold = 100
+style = "bg:black fg:bold green"
+charging_symbol = "󰂅 "
+discharging_symbol = "󰁹 "
+
+[cmd_duration]
+min_time = 500
+format = "[\uE0C7](fg:bright-yellow bg:black )[ 󱦟 $duration\uE0C7](bg:bright-yellow fg:black)"
+
+[time]
+disabled = false
+time_format = "%I:%M%P"
+# use_12hr = false
+format = "[ $time ](bg:black fg:bright-blue)"
+
+[git_branch]
+format = "[$symbol $branch ]($style)"
+truncation_symbol = " /"
+symbol = ""
+style = "bg:black fg:bright-blue"
+
+[git_commit]
+style = "bg:black fg:bold green"
+
+[git_status]
+format ='([\[$all_status$ahead_behind\]]($style))'
+conflicted = "="
+ahead =	"⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count} "
+stashed = "$${count} "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+style = "bg:black fg:bold bright-purple"
+disabled = false
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style = "bg:black fg:bold yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+disabled = false
+
+[hg_branch]
+symbol = " "
+style = "bg:black fg:bold purple"
+format = "on [$symbol$branch]($style) "
+
+[nodejs]
+format = "via [$symbol$version]($style) "
+symbol = "⬢ "
+style = "bg:black fg:bold green"
+disabled = false
+not_capable_style = "bg:black fg:bold red"
+
+[status]
+format = "[$symbol$status]($style)"
+symbol = "✖"
+style = "bg:black fg:bold red"
+disabled = true
+
+[aws]
+symbol = "  "
+style = "bg:black fg:yellow"
+
+[conda]
+symbol = " "
+style = "bg:black"
+
+[dart]
+symbol = " "
+style = "bg:black"
+
+[docker_context]
+symbol = " "
+style = "bg:black fg:cyan"
+
+[elixir]
+symbol = " "
+style = "bg:black"
+
+[elm]
+symbol = " "
+style = "bg:black"
+
+[golang]
+symbol = " "
+style = "bg:black"
+
+[java]
+symbol = " "
+style = "bg:black"
+
+[julia]
+symbol = " "
+style = "bg:black"
+
+[lua]
+symbol = " "
+style = "bg:black"
+
+[nim]
+symbol = " "
+style = "bg:black"
+
+[nix_shell]
+symbol = " "
+style = "bg:black"
+
+[package]
+symbol = " "
+style = "bg:black"
+
+[python]
+symbol = " "
+style = "bg:black"
+
+[rlang]
+symbol = "ﳒ "
+style = "bg:black"
+
+[ruby]
+symbol = " "
+style = "bg:black"
+
+[rust]
+symbol = " "
+style = "bg:black"
+
+[scala]
+symbol = " "
+style = "bg:black"
