@@ -20,7 +20,7 @@ Currently i am using my own custom color them GoSh.
 ## Wezterm
 This is my terminal emulator/multiplexer of choice.
 
-![terminal](https://github.com/CryptisMidnight/dots/assets/6416941/51927c41-0f27-45b9-a240-777a431133ab)
+![terminal](https://github.com/CryptisMidnight/dots/assets/6416941/51927c41-0f27-45b9-a240-777a431133ab.mp4)
 
 This is an example me config for Wezterm, this one is pixelized there is a standard version too.
 
