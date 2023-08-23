@@ -1,0 +1,432 @@
+/* Color Style 
+@import url("./color.css");*/
+@import './color.css';
+:root{
+  /* --colorHighlightBg: var(--color02); */
+  --baseBG: color-mix(in srgb, var(--color19), transparent 44%);
+  --lghtBG: color-mix(in srgb, var(--color01), transparent 44%);
+
+
+}
+
+
+@keyframes grad {
+	0% {background: linear-gradient(90deg, transparent 5%, var(--colorAccentBgDark), transparent 95%);}
+  10% {background: linear-gradient(90deg, transparent 7%, var(--colorAccentBgDark), transparent 93%);}
+	20% {background: linear-gradient(90deg, transparent 9%, var(--colorAccentBgDark), transparent 91%);}
+  30% {background: linear-gradient(90deg, transparent 11%, var(--colorAccentBgDark), transparent 89%);}
+	40% {background: linear-gradient(90deg, transparent 13%, var(--colorAccentBgDark), transparent 87%);}
+	50% {background: linear-gradient(90deg, transparent 15%, var(--colorAccentBgDark), transparent 85%);}
+	60% {background: linear-gradient(90deg, transparent 17%, var(--colorAccentBgDark), transparent 83%);}
+	70% {background: linear-gradient(90deg, transparent 19%, var(--colorAccentBgDark), transparent 81%);}
+	80% {background: linear-gradient(90deg, transparent 21%, var(--colorAccentBgDark), transparent 79%);}
+	90% {background: linear-gradient(90deg, transparent 23%, var(--colorAccentBgDark), transparent 77%);}
+	100% {background: linear-gradient(90deg, transparent 25%, var(--colorAccentBgDark), transparent 75%);}
+}
+@keyframes padd {
+	0% {padding: 0.1em 3.5em;}
+  10% {padding: 0.1em 3.6em;}
+	20% {padding: 0.1em 3.7em;}
+  30% {padding: 0.1em 3.8em;}
+	40% {padding: 0.1em 3.9em;}
+	50% {padding: 0.1em 4.0em;}
+	60% {padding: 0.1em 4.1em;}
+	70% {padding: 0.1em 4.2em;}
+	80% {padding: 0.1em 4.3em;}
+	90% {padding: 0.1em 4.4em;}
+	100% {padding: 0.1em 4.5em;}
+  
+}
+/* Main Varibles */
+
+style attribute {
+    --colorTabBar: transparent;
+  /*
+  --colorFg: #a5a5a5;
+  --colorFgAlpha: #a5a5a51a;
+  --colorFgIntense: #828282;
+  --colorFgFaded: #9d9d9d;
+  --colorFgFadedMore: #949494;
+  --colorFgFadedMost: #808080;
+  --colorBg: #101010;
+  --colorBgAlpha: #101010e6;
+  --colorBgAlphaHeavy: #101010a6;
+  --colorBgAlphaHeavier: #10101040;
+  --colorBgAlphaBlur: #101010bf;
+  --colorBgDark: #070707;
+  --colorBgDarker: #000000;
+  --colorBgLight: #141414;
+  --colorBgLighter: #232323;
+  --colorBgLightIntense: #181818;
+  --colorBgIntense: #000000;
+  --colorBgIntenser: #000000;
+  --colorBgIntserAlpha: #000000eb;
+  --colorBgInverse: #141414;
+  --colorBgInverser: #1f1f1f;
+  --colorBgFaded: #1c1c1c;
+  --backgroundBlur: blur(5px);
+  --colorHighlightBg: #f52040;
+  --colorHighlightBgFaded: #ff626b;
+  --colorHighlightBgAlpha: #f520401a;
+  --colorHighlightBgDark: #d7002c;
+  --colorHighlightFg: #ffffff;
+  --colorHighlightFgAlpha: #ffffff80;
+  --colorHighlightFgAlphaHeavy: #ffffff40;
+  --colorAccentBg: #1f1f1f;
+  --colorAccentBgAlpha: #4e4e4e8c;
+  --colorAccentBgAlphaHeavy: #4e4e4e59;
+  --colorAccentBgDark: #101010;
+  --colorAccentBgDarker: #000000;
+  --colorAccentBgFaded: #141414;
+  --colorAccentBgFadedMore: #323232;
+  --colorAccentBgFadedMost: #4e4e4e;
+  --colorAccentBorder: #1f1f1f;
+  --colorAccentBorderDark: #161616;
+  --colorAccentFg: #ffffff;
+  --colorAccentFgFaded: #c6c6c6;
+  --colorAccentFgAlpha: #ffffff26;
+  --colorAccentFgAlphaHeavy: #ffffff0d;
+  --colorBorder: #000000;
+  --colorBorderDisabled: #090909;
+  --colorBorderSubtle: #080808;
+  --colorBorderIntense: #000000;
+  --colorSuccessBg: #06a700;
+  --colorSuccessBgAlpha: #06a7001a;
+  --colorSuccessFg: #ffffff;
+  --colorWarningBg: #efaf00;
+  --colorWarningBgAlpha: #efaf001a;
+  --colorWarningFg: #000000;
+  --colorErrorBg: #c64539;
+  --colorErrorBgAlpha: #c645391a;
+  --colorErrorFg: #ffffff;
+  --colorWindowBg: #202127;
+  --colorWindowFg: #ffffff;
+  --radiusRound: 100px;
+  --radiusRounded: 2px;
+  --radiusRoundedLess: 13px;
+  --radius: 14px;
+  --radiusHalf: 7px;
+  --radiusCap: 8px;
+  --scrollbarWidth: 16px;
+  --uiZoomLevel: 1;
+  background-image: url("chrome://vivaldi-data/desktop-image/0");
+  --colorImageCenterFg: rgb(255,255,255);
+  --colorImageCenterFgAlpha: rgba(255,255,255,0.6);
+  --colorImageCenterFgAlphaHeavy: rgba(255,255,255,0.05);
+  --colorImageCenterBg: rgb(11,11,11);
+  --colorImageCenterBgAlpha: rgba(51,51,51,0.55);
+  --colorImageCenterBgAlphaHeavy: rgba(51,51,51,0.35);
+  --colorImageTopFg: rgb(255,255,255);
+  --colorImageTopFgAlpha: rgba(255,255,255,0.6);
+  --colorImageTopFgAlphaHeavy: rgba(255,255,255,0.05);
+  --colorImageTopBg: rgb(10,10,10);
+  --colorImageTopBgAlpha: rgba(50,50,50,0.55);
+  --colorImageTopBgAlphaHeavy: rgba(50,50,50,0.35);
+  --colorImageRightFg: rgb(255,255,255);
+  --colorImageRightFgAlpha: rgba(255,255,255,0.6);
+  --colorImageRightFgAlphaHeavy: rgba(255,255,255,0.05);
+  --colorImageRightBg: rgb(11,11,11);
+  --colorImageRightBgAlpha: rgba(51,51,51,0.55);
+  --colorImageRightBgAlphaHeavy: rgba(51,51,51,0.35);
+  --colorImageBottomFg: rgb(255,255,255);
+  --colorImageBottomFgAlpha: rgba(255,255,255,0.6);
+  --colorImageBottomFgAlphaHeavy: rgba(255,255,255,0.05);
+  --colorImageBottomBg: rgb(11,11,11);
+  --colorImageBottomBgAlpha: rgba(51,51,51,0.55);
+  --colorImageBottomBgAlphaHeavy: rgba(51,51,51,0.35);
+  --colorImageLeftFg: rgb(255,255,255);
+  --colorImageLeftFgAlpha: rgba(255,255,255,0.6);
+  --colorImageLeftFgAlphaHeavy: rgba(255,255,255,0.05);
+  --colorImageLeftBg: rgb(11,11,11);
+  --colorImageLeftBgAlpha: rgba(51,51,51,0.55);
+  --colorImageLeftBgAlphaHeavy: rgba(51,51,51,0.35);
+  background-size: cover;
+*/
+}
+
+/* Header */
+
+.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top) #header {
+  color: var(--color16);
+  background-color: var(--baseBG);
+  background-image: radial-gradient(var(--colorAccentBgDark), transparent 85%);
+  backdrop-filter: var(--backgroundBlur);
+}
+#browser.win #titlebar #pagetitle {
+  padding: 0 140px;
+}
+#titlebar #pagetitle {
+  justify-content: center;
+}
+#titlebar #pagetitle > span {
+  padding: 0.1em 3.5em;
+  background-image: linear-gradient(90deg, transparent 2%, #050505 20% 80%, transparent 98%);
+  animation: padd 2s ease-in-out infinite both alternate
+}
+#browser .window-buttongroup {
+  display: flex;
+  z-index: 1;
+  scale: calc(0.75 / var(--uiZoomLevel));
+  fill: currentColor;
+}
+
+/* Left */
+
+#browser.transparent-tabbar #tabs-tabbar-container.left,
+#browser.transparent-tabbar #tabs-tabbar-container.right {
+  background-color: var(--baseBG);
+  backdrop-filter: var(--backgroundBlur);
+}
+#app .button-toolbar.workspace-popup button {
+  gap: 3px;
+  color: var(--color06);
+}
+.button-toolbar.toggle-trash {
+  --colorImageFg: var(--color14);
+}
+#browser:not(.alt-tabs) #tabs-container .tab-audio,
+#browser:not(.alt-tabs) #tabs-container .tab.pinned:not(.active) .tab-audio {
+  top: -2px;
+  left: -2px;
+}
+#browser #tabs-container .tab.tab-small.audio-on .tab-audio:hover,
+#browser #tabs-container .tab.pinned.audio-on .tab-audio:hover,
+#browser #tabs-container .tab.tab-small.audio-muted .tab-audio:hover,
+#browser #tabs-container .tab.pinned.audio-muted .tab-audio:hover,
+#browser #tabs-container .tab.tab-small.tab-captured .tab-audio:hover,
+#browser #tabs-container .tab.pinned.tab-captured .tab-audio:hover {
+  transform: scale(0.87);
+  top: 2px;
+  left: 2px;
+}
+
+/* Center */
+
+#webview-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  background-color: var(--baseBG);
+  backdrop-filter: var(--backgroundBlur);
+}
+#webpage-stack {
+  border: var(--color19) solid 0.15em;
+  border-radius: 0.5em;
+}
+
+/* Right */
+
+#panels-container {
+  display: flex;
+  flex: 0 0 auto;
+  max-width: 61.8%;
+  overflow: visible;
+  position: relative;
+  color: var(--color16);
+  border: 0 solid var(--colorBorder);
+  background-color: var(--baseBG);
+  backdrop-filter: var(--backgroundBlur);
+  z-index: 1;
+  contain: content;
+}
+.toolbar.toolbar-droptarget.toolbar-panel.toolbar-medium.toolbar-vertical .button-toolbar.panel-clickoutside-ignore {
+  color: var(--color14);
+}
+
+/* Bottom */
+
+.color-behind-tabs-off.address-top .mainbar > .toolbar-mainbar {
+  border-color: transparent;
+  background: var(--baseBG);
+  backdrop-filter: var(--backgroundBlur);
+  animation: grad 2s ease-in-out infinite both alternate;
+}
+.color-behind-tabs-off.address-bottom .mainbar > .toolbar-mainbar {
+  border-color: transparent;
+  background: var(--baseBG);
+  backdrop-filter: var(--backgroundBlur);
+  animation: grad 2s ease-in-out infinite both alternate;
+}
+span.button-icon.override {
+  filter: invert(30%) sepia(50%) saturate(2950%);
+}
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button:hover,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls > .button-toolbar > button:hover,
+.color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button:hover,
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button:hover,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls > .toolbar-group > .button-toolbar > button:hover,
+.color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button:active,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls > .button-toolbar > button:active,
+.color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button:active,
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button:active,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls > .toolbar-group > .button-toolbar > button:active,
+.color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active {
+  background-color: var(--lghtBG);
+}
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls > .button-toolbar > button,
+.color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button,
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls > .toolbar-group > .button-toolbar > button,
+.color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button{
+  background-color: transparent;
+  color: var(--color04);
+}
+.button-toolbar.ContentBlocker-Control {
+  color: var(--color04);
+}
+.SiteInfoButton.secure, .SiteInfoButton.certified {
+  color: var(--color03);
+}
+.SiteInfoButton.warning {
+  color: var(--color02);
+}
+.toolbar.toolbar-small.toolbar-insideinput {
+  color: var(--color04);
+}
+.mainbar > .toolbar-mainbar {
+  color: var(--colorFg);
+  background-color: var(--baseBG);  
+  backdrop-filter: var(--backgroundBlur);
+  height: 35px;
+}
+.toolbar-extensions {
+  background-color: transparent !important;
+}
+:not(.tabs-bottom)#browser > footer:after {
+  background-color: transparent;
+  backdrop-filter: var(--backgroundBlur);
+}
+:not(.tabs-bottom)#browser > footer {
+  background: var(--baseBG);
+  backdrop-filter: var(--backgroundBlur);
+  color: var(--colorFg);
+}
+.toolbar > .StatusInfo {
+  flex: 1;
+  color: var(--colorHighlightBg);
+}
+.button-toolbar.ClockButton.ClockButton--time {
+  width: auto;
+  padding-left: 64px;
+}
+.button-toolbar > button.button-textonly .button-title {
+  text-align: center;
+  font-size: 14px;
+}
+.button-toolbar.tilingtoggle.large {
+  color: var(--color03);
+}
+.toolbar.toolbar-droptarget.toolbar-statusbar.toolbar-medium .button-toolbar.panel-clickoutside-ignore {
+  color: var(--color03);
+}
+
+/* Misc */
+/* Settings */
+.vivaldi-settings .settings-sidebar .button-category.group_1 {
+  fill: var(--color12);
+  stroke: var(--color12);
+}
+.vivaldi-settings .settings-sidebar .button-category.group_2 {
+  fill: var(--color04);
+  stroke: var(--color04);
+}
+.vivaldi-settings .settings-sidebar .button-category.group_3 {
+  fill: var(--color11);
+  stroke: var(--color11);
+}
+.vivaldi-settings .settings-sidebar .button-category.group_4 {
+  fill: var(--color06);
+  stroke: var(--color06);
+}
+.vivaldi-settings .settings-sidebar .button-category.group_5 {
+  fill: var(--color07);
+  stroke: var(--color07);
+}
+.vivaldi-settings .settings-sidebar .button-category.group_6 {
+  fill: var(--color14);
+  stroke: var(--color14);
+}
+/* StartPage */
+
+.startpage .startpage-navigation {
+  flex: 0 0 auto;
+  text-align: center;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 12px;
+  padding-left: 12px;
+  display: flex;
+  justify-content: center;
+  min-height: 43px;
+  background-color: transparent;
+  box-shadow: inset 0 -2px 0 transparent;
+  z-index: 4;
+}
+.startpage .startpage-navigation .startpage-navigation-group {
+  align-items: center;
+  padding-top: 1.5em;
+}
+.button-startpage:focus-visible, .button-startpage.active {
+  border-color: transparent;
+  font-weight: bolder;
+  box-shadow: inset 0 -0.15em 0.5em var(--color04);
+}
+.button-startpage {
+  min-height: 0;
+  max-width: 100%;
+  border-bottom-width: 0px;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage {
+  border-radius: 1.5em;
+  margin: 0 .25em;
+  height: 2em;
+  background: var(--baseBG);
+}
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage:hover {
+  transition: 750ms;
+  color: var(--colorHighlightBg);
+  background: #050505;
+}
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage:active {
+  transition: 250ms;
+  background: var(--colorHighlightBg);
+}
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {
+  border-left: 0px solid transparent;
+}
+.button-startpage .button-icon,
+.button-startpage .button-icon svg {
+  color: var(--color04);
+}
+.SpeedDial-Blocked-Counter-Container {
+  height: 2.5em;
+  gap: .2em;
+}
+span.VivaldiSvgIcon.Blocker-Shield-Blocking {
+  margin-left: auto;
+  margin-right: .75em;
+}
+.SpeedDial-Blocked-Counter .Blocked-Info {
+  font-size: 1.15em;
+  margin: 0 auto;
+  color: var(--colorHighlightBg);
+}
+.SpeedDial-Blocked-Counter .Info-Icon {
+  margin-right: auto;
+  margin-left: .75em;
+}
+.speeddial .dial {
+  border-radius: var(--radius);
+  box-shadow: 0 0 5px 0 var(--colorHighlightBg);
+  transition: margin 200ms ease-out, box-shadow 200ms ease-out;
+}
+.dials .dial .favicon {
+  margin-left: 1em;
+}
