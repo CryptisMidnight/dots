@@ -229,6 +229,12 @@ style attribute {
   z-index: 1;
   contain: content;
 }
+.toolbar-vertical.toolbar .button-toolbar.toolbar-divider svg rect {
+    max-height: 30px;
+    color: var(--color13);
+    width: 0.2em;
+    height: 2em;
+}
 .toolbar.toolbar-droptarget.toolbar-panel.toolbar-medium.toolbar-vertical .button-toolbar.panel-clickoutside-ignore {
   color: var(--color14);
 }
@@ -294,6 +300,15 @@ span.button-icon.override {
 .toolbar-extensions {
   background-color: transparent !important;
 }
+button[name="MailMsgSpam"]{
+  color: var(--color02) !important;
+}
+button[name="MailMsgArchive"] {
+  color: var(--color12) !important;
+}
+button[name="MailMsgTrash"] {
+  color: var(--color02) !important;
+}
 :not(.tabs-bottom)#browser > footer:after {
   background-color: transparent;
   backdrop-filter: var(--backgroundBlur);
@@ -313,7 +328,8 @@ span.button-icon.override {
 }
 .button-toolbar > button.button-textonly .button-title {
   text-align: center;
-  font-size: 14px;
+  font-size: 1.4em;
+  color: var(--color08);
 }
 .button-toolbar.tilingtoggle.large {
   color: var(--color03);
