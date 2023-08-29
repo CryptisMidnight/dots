@@ -3,6 +3,7 @@
 Import-Module Terminal-Icons
 Import-Module sysFun
 Import-Module ytdl
+Import-Module music-dl
 
 #functions/aliases
 $prompt = ""
