@@ -216,7 +216,7 @@ style attribute {
 
 /* Right */
 
-#panels-container {
+ #panels-container {
   display: flex;
   flex: 0 0 auto;
   max-width: 61.8%;
@@ -227,7 +227,6 @@ style attribute {
   background-color: var(--baseBG);
   backdrop-filter: var(--backgroundBlur);
   z-index: 1;
-  contain: content;
 }
 .toolbar-vertical.toolbar .button-toolbar.toolbar-divider svg rect {
     max-height: 30px;
