@@ -385,6 +385,7 @@ button[name="MailMsgTrash"] {
   padding-top: 1.5em;
 }
 .button-startpage:focus-visible, .button-startpage.active {
+  transition: 750ms;
   border-color: transparent;
   font-weight: bolder;
   box-shadow: inset 0 -0.15em 0.5em var(--color04);
@@ -410,7 +411,8 @@ button[name="MailMsgTrash"] {
   background: #050505;
 }
 .startpage .startpage-navigation .startpage-navigation-group .button-startpage:active {
-  transition: 250ms;
+  transition: 750ms;
+  color: #050505;
   background: var(--colorHighlightBg);
 }
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type {
@@ -439,8 +441,12 @@ span.VivaldiSvgIcon.Blocker-Shield-Blocking {
 }
 .speeddial .dial {
   border-radius: var(--radius);
-  box-shadow: 0 0 5px 0 var(--colorHighlightBg);
-  transition: margin 200ms ease-out, box-shadow 200ms ease-out;
+  box-shadow: 0 0 5px 0 var(--color04);
+  transition: margin 300ms ease-out, box-shadow 300ms ease-out;
+}
+.dials-wrapper:not(.dragging-disabled) .speeddial .dial:hover {
+  transition-duration: 750ms;
+  box-shadow: 0 0 16px 0 var(--colorHighlightBg);
 }
 .dials .dial .favicon {
   margin-left: 1em;
