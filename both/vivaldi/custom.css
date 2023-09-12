@@ -225,7 +225,7 @@ style attribute {
   color: var(--color16);
   border: 0 solid var(--colorBorder);
   background-color: var(--baseBG);
-  backdrop-filter: var(--backgroundBlur);
+  backdrop-filter: none;
   z-index: 1;
 }
 .toolbar-vertical.toolbar .button-toolbar.toolbar-divider svg rect {
