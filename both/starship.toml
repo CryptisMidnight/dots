@@ -5,10 +5,10 @@
 # $all[╚═](bold bright-green)$character"""
 # Powerline
 format = """
-[\uE0B6](black)\
+[](black)\
 $os\
 $username\
-$hostname\
+$sudo\
 $directory\
 $git_branch$git_status$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust$docker_context\
 $character\
@@ -18,8 +18,8 @@ $memory_usage\
 $battery\
 $cmd_duration\
 $time\
-[\u2588\uE0B4](black)\
-$all[\uE0B6\uE0D2\uF054 ](red)"""
+[](black)\
+$all[ ](red)"""
 
 add_newline = true
 
@@ -27,12 +27,12 @@ add_newline = true
 symbol = " "
 
 [character]
-success_symbol = "[\uE0C6 ](bg:bright-green fg:black)[󰛨 ](bg:bright-green fg:black)[\uE0C6](bright-green)"
-error_symbol = "[\uE0C6 ](bg:red fg:black)[󰚌 ](bg:red fg:black)[\uE0C6](red)"
+success_symbol = "[](bg:bright-green fg:black)[󰛨 ](bg:bright-green fg:black)[](bright-green)"
+error_symbol = "[](bg:red fg:black)[󰚌 ](bg:red fg:black)[](red)"
 
 [os]
 style = "bg:black fg:bright-white"
-format = "[ $symbol ]($style)"
+format = "[ $symbol]($style)"
 disabled = false
 
 [os.symbols]
@@ -78,11 +78,18 @@ Unknown = " "
 
 [username]
 show_always = true
-style_user = "bg:black fg:red"
-style_root = "bg:black fg:purple"
+style_user = "red"
+style_root = "purple"
 # style_user = "bright-green"
 # style_root = "green"
-format = "[$user ]($style)[󰁥 ]($style fg:white)"
+format = "[](fg:black bg:$style)[](fg:$style bg:black)"
+disabled = false
+
+[sudo]
+allow_windows = true
+style = "bright-blue" 
+# symbol = 'sudo'
+format = "[](fg:black bg:$style)[](fg:$style bg:black)"
 disabled = false
 
 [hostname]
@@ -90,7 +97,7 @@ ssh_only = false
 style = "bg:black"
 ssh_symbol = " "
 format = "[$ssh_symbol](bold $style fg:bright-cyan)[ $hostname ]($style fg:red)"
-disabled = false
+disabled = true
 
 [directory]
 truncation_length = 2
@@ -98,20 +105,21 @@ truncation_symbol = "󰉓 /"
 home_symbol = " "
 format = "[$read_only]($read_only_style)[ $path ]($style)"
 style = "bg:black fg:bold green"
-read_only = "\uE0C6 󱚮\uE0C7\u2590"
-read_only_style = "bg:red fg:black"
+read_only = " 󱚮 "
+read_only_style = "bg:black fg:red"
 
 [directory.substitutions]
-"Documents" = "󰲂"
-"Downloads" = "󰉍"
-"Music" = "󱍙"
-"Pictures" = "󰉏"
-"Games" = "󱧺"
+"Documents" = "󰈙"
+"Downloads" = "󰇚"
+"Music" = "󰸪"
+"Pictures" = ""
+"Games" = "󱎓"
+"Videos" = ""
 
 [memory_usage]
 disabled = false
 threshold = -1
-format = "[\uE0C7](fg:bright-green)[$symbol $ram_pct mem]($style)[\uE0C7](bg:bright-green fg:black)"
+format = "[](fg:bright-green)[$symbol $ram_pct mem]($style)[](bg:bright-green fg:black)"
 symbol = " "
 style = "bg:bright-green fg:black"
 
@@ -157,7 +165,7 @@ discharging_symbol = "󰁹 "
 
 [cmd_duration]
 min_time = 500
-format = "[\uE0C7](fg:bright-yellow bg:black )[ 󱦟 $duration\uE0C7](bg:bright-yellow fg:black)"
+format = "[](fg:bright-yellow bg:black )[ 󱦟 $duration ](bg:bright-yellow fg:black)"
 
 [time]
 disabled = false
