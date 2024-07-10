@@ -19,7 +19,9 @@ $battery\
 $cmd_duration\
 $time\
 [](black)\
-$all[ ](red)"""
+$all\
+$shell"""
+# $all[ ](red)
 
 add_newline = true
 
@@ -29,6 +31,17 @@ symbol = " "
 [character]
 success_symbol = "[](bg:bright-green fg:black)[󰛨 ](bg:bright-green fg:black)[](bright-green)"
 error_symbol = "[](bg:red fg:black)[󰚌 ](bg:red fg:black)[](red)"
+
+[shell]
+fish_indicator = ' 󰈺 '
+bash_indicator = ' 󱆃 '
+zsh_indicator = '  '
+powershell_indicator = ' 󰨊 '
+cmd_indicator = '  '
+unknown_indicator = '  '
+format = "[](black)[$indicator](fg:$style bg:black)[](black)"
+style = 'cyan'
+disabled = false
 
 [os]
 style = "bg:black fg:bright-white"
@@ -89,7 +102,7 @@ disabled = false
 allow_windows = true
 style = "bright-blue" 
 # symbol = 'sudo'
-format = "[](fg:black bg:$style)[](fg:$style bg:black)"
+format = "[ ](fg:black bg:$style)[](fg:$style bg:black)"
 disabled = false
 
 [hostname]
@@ -268,7 +281,7 @@ symbol = " "
 style = "bg:black"
 
 [nim]
-symbol = " "
+symbol = " "
 style = "bg:black"
 
 [nix_shell]
@@ -276,7 +289,7 @@ symbol = " "
 style = "bg:black"
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 style = "bg:black"
 
 [python]
@@ -292,7 +305,7 @@ symbol = " "
 style = "bg:black"
 
 [rust]
-symbol = " "
+symbol = "󱘗 "
 style = "bg:black"
 
 [scala]

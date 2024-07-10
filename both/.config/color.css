@@ -1,0 +1,24 @@
+:root {
+    /* Colors */
+    /* With 75% 0pacity */
+    --clr01: #252525;
+    --clr02: #f52040;
+    --clr03: #91f779;
+    --clr04: #fba753;
+    --clr05: #2040f5;
+    --clr06: #a13ef7;
+    --clr07: #00bfff;
+    --clr08: #b5b5b5;
+    --clr09: #3a3a3a;
+    --clr10: #f87eaa;
+    --clr11: #00e687;
+    --clr12: #f6e13c;
+    --clr13: #8172ff;
+    --clr14: #ff3ceb;
+    --clr15: #0cdaff;
+    --clr16: #e0e0e0;
+    --clr17: #a5a5a5;
+    --clr18: #050505c0;
+    --clr19: #101010;
+    --clr20: #050505;
+}

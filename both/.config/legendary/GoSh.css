@@ -1,0 +1,95 @@
+:root {
+  --clr01: #252525c0;
+  --clr02: #f52040c0;
+  --clr03: #91f779c0;
+  --clr04: #fba753c0;
+  --clr05: #2040f5c0;
+  --clr06: #a13ef7c0;
+  --clr07: #00bfffc0;
+  --clr08: #b5b5b5c0;
+  --clr09: #3a3a3ac0;
+  --clr10: #f87eaac0;
+  --clr11: #00e687c0;
+  --clr12: #f6e13cc0;
+  --clr13: #8172ffc0;
+  --clr14: #ff3cebc0;
+  --clr15: #0cdaffc0;
+  --clr16: #e0e0e0c0;
+  --clr17: #a5a5a5c0;
+  --clr18: #050505c0;
+  --clr19: #101010c0;
+  --clr20: #050505;
+}
+body.GoSh {
+    --background: var(--clr19);
+    --background-darker: var(--clr20);
+    --background-darker-80: var(--clr18);
+    --background-secondary: var(--clr01);
+    --background-lighter: var(--clr19);
+  
+    /* Colours */
+    --navbar-background: var(--background);
+    --input-background: var(--background-darker);
+    --body-background: var(--clr09);
+    --current-background: var(--body-background);
+    --modal-background: var(--clr09);
+    --modal-border: var(--clr02);
+    --text-hover: #00c6f3;
+    --primary: #07c5ef;
+    --primary-hover: #4cdafa;
+    --link-highlight: #07c5ef;
+    --accent: var(--clr04);
+    --accent-overlay: var(--clr12);
+    --navbar-accent: var(--accent);
+    --navbar-active-background: var(--background-lighter);
+    --play-button: #59d0ea;
+    --download-button: #3082d9;
+    --download-button-overlay: #1372d7;
+    --danger: #bd0a0a; /* These success, danger and disabled colours need to be documented */
+    --success: #0bd58c;
+    --success-hover: #30eca8;
+    --danger-hover: #e43f3f;
+    --icon-disabled: #625e69;
+    --icons-background: #17131c;
+    --divider: gray;
+    --osk-background: var(--body-background);
+    --osk-button-background: var(--input-background);
+    --osk-button-border: var(--navbar-background);
+    --controller-hints-background: transparent;
+  
+    --anticheat-denied: var(--danger);
+    --anticheat-broken: #e8590c;
+    --anticheat-running: #0e8598;
+    --anticheat-supported: #2f9e44;
+    --anticheat-planned: #6841d9;
+  
+    /* Gradients */
+    --gamecard-title-color: var(--clr18);
+    --gradient-gamecard: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.418) 1.8%,
+      var(--gamecard-title-color) 45%
+    );
+    --gradient-body-background: linear-gradient(
+      90deg,
+      var(--background-darker) -32px,
+      var(--body-background) 64px,
+      var(--body-background) 100%
+    );
+    /* Text colours */
+    --text-default: #eae8e5;
+    --text-secondary: #b1b1b1;
+    --text-pause-cancel: #97f4e9;
+    --text-title: #ffffff;
+    --text-tertiary: #101111; /* This is not defined in figma */
+    --text-quartenary: #5a5e5f; /* this is meant to be a background colour */
+    --text-danger: #d22121;
+    --text-gametitle: var(--text-default);
+    --text-log: #f5cf69;
+    --text-warning: #eaa114;
+  
+    /*Action Icons*/
+    --action-icon: var(--text-default);
+    --action-icon-hover: var(--text-hover);
+    --action-icon-active: var(--accent);
+  }
