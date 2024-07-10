@@ -1,4 +1,5 @@
 {
+    "autoindent": false,
     "colorscheme": "cm-gosh",
     "mkparents": true
 }
